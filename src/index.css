@@ -1,0 +1,359 @@
+/* ==========================================================
+   DESIGN SYSTEM & CSS VARIABLES - PRAVEENKUMAR BALAKRISHNAN
+   Aesthetic: "Digital Laboratory created by a Python and AI developer"
+   ========================================================== */
+
+:root {
+  /* Colors */
+  --bg-primary: #F3F1EB;
+  --bg-primary-rgb: 243, 241, 235;
+  --text-primary: #0A0A0A;
+  --text-primary-rgb: 10, 10, 10;
+  --accent: #E53935;
+  --accent-rgb: 229, 57, 53;
+  --accent-hover: #C62828;
+  --text-secondary: #737373;
+  --text-muted: #9E9E9E;
+  --border-color: rgba(10, 10, 10, 0.12);
+  --border-light: rgba(10, 10, 10, 0.06);
+  --card-bg: rgba(255, 255, 255, 0.7);
+
+  /* Dark Sections (Current Focus, Contact, Footer) */
+  --bg-dark: #0A0A0A;
+  --text-dark: #F3F1EB;
+  --border-dark: rgba(243, 241, 235, 0.15);
+  --secondary-dark: #9E9E9E;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Fluid Spacing - Compact & Dense System */
+  --container-max: 1280px;
+  --container-padding: clamp(1rem, 3.5vw, 2.5rem);
+  --section-spacing: clamp(3rem, 5.5vw, 4.8rem);
+
+  /* Layout & Transitions */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 9999px;
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset & Smoothness */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: inherit;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Containers & Layout Helpers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section {
+  position: relative;
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+/* Technical Badges & Monospace Tags */
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  background: rgba(10, 10, 10, 0.04);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.tech-tag::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.dark-section .tech-tag {
+  background: rgba(243, 241, 235, 0.06);
+  border-color: var(--border-dark);
+  color: var(--text-dark);
+}
+
+/* Editorial Section Header */
+.section-header {
+  margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.dark-section .section-title {
+  color: var(--text-dark);
+}
+
+/* Magnetic Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--text-primary);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(10, 10, 10, 0.05);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+/* Editorial Dividers */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: var(--section-spacing) 0;
+}
+
+/* Custom Cursor Elements (Desktop only) */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, opacity 0.2s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              width 0.25s ease,
+              height 0.25s ease,
+              background-color 0.25s ease,
+              border-color 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-cursor-follower.is-hovering {
+  width: 72px;
+  height: 72px;
+  background-color: rgba(229, 57, 53, 0.12);
+  border-color: var(--accent);
+}
+
+.custom-cursor-follower.is-view {
+  width: 88px;
+  height: 88px;
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.custom-cursor-follower .cursor-text {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.2s ease;
+}
+
+.custom-cursor-follower.is-view .cursor-text,
+.custom-cursor-follower.is-click .cursor-text,
+.custom-cursor-follower.is-explore .cursor-text {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .custom-cursor,
+  .custom-cursor-follower {
+    display: none !important;
+  }
+}
+
+/* Mobile Cursor Suppression */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor,
+  .custom-cursor-follower {
+    display: none !important;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(10, 10, 10, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
