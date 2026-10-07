@@ -5,6 +5,7 @@ import './About.css';
 import { personalData, educationData } from '../../data/portfolio';
 import SectionHeader from '../Common/SectionHeader';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
+import profileImg from '../../assets/images/praveenkumar-profile.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,7 +81,7 @@ export default function About() {
             <div className="about-portrait-card" data-cursor="explore">
               <div className="about-portrait-frame">
                 <img
-                  src="/images/praveenkumar-profile.png"
+                  src={profileImg}
                   alt="Praveenkumar Balakrishnan - Python Developer & AI Engineer"
                   className="about-portrait-img"
                   loading="lazy"
