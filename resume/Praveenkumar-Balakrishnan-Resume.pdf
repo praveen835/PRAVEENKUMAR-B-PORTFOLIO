@@ -1,0 +1,130 @@
+%PDF-1.4
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 612 792]
+  /Resources <<
+    /Font <<
+      /F1 4 0 R
+      /F2 5 0 R
+    >>
+  >>
+  /Contents 6 0 R
+>>
+endobj
+4 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica-Bold
+>>
+endobj
+5 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+6 0 obj
+<< /Length 1350 >>
+stream
+BT
+/F1 20 Tf
+50 740 Td
+(PRAVEENKUMAR BALAKRISHNAN) Tj
+/F2 11 Tf
+0 -18 Td
+(Python Developer | Coimbatore, India | praveenkumarb226@gmail.com) Tj
+0 -25 Td
+/F1 13 Tf
+(EDUCATION) Tj
+/F2 10 Tf
+0 -16 Td
+(B.Tech Artificial Intelligence & Data Science | KGiSL Institute of Technology (2023 - 2027) | CGPA: 8.98) Tj
+0 -14 Td
+(Higher Secondary Certificate | Sri Sowdeswari Vidyalaya (2021 - 2023) | 87.5%) Tj
+0 -24 Td
+/F1 13 Tf
+(TECHNICAL SKILLS) Tj
+/F2 10 Tf
+0 -16 Td
+(Languages: Python, Java) Tj
+0 -14 Td
+(Backend: FastAPI, Flask, REST APIs) Tj
+0 -14 Td
+(AI & Data: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Gradio) Tj
+0 -14 Td
+(Databases: SQL, MySQL concepts, Relational Databases) Tj
+0 -14 Td
+(Frontend: React, JavaScript, HTML, CSS) Tj
+0 -14 Td
+(Tools: Git, GitHub) Tj
+0 -14 Td
+(DSA: Arrays, Strings, Linked Lists, Stacks, Queues, Trees, Sorting, Searching) Tj
+0 -24 Td
+/F1 13 Tf
+(EXPERIENCE) Tj
+/F2 10 Tf
+0 -16 Td
+(React JS Intern - Accent Techno Soft, Coimbatore (June 2025 - July 2025)) Tj
+0 -14 Td
+(- Collaborated using Git version control, pull requests, and peer code review.) Tj
+0 -14 Td
+(- Engineered modular components and integrated REST APIs for dynamic data flow.) Tj
+0 -14 Td
+(- Conducted debugging and testing across diverse web environments.) Tj
+0 -24 Td
+/F1 13 Tf
+(PROJECTS) Tj
+/F2 10 Tf
+0 -16 Td
+(1. Next Hire AI: AI-Powered Resume Screening & Career Intelligence Platform (Python, NLP, XGBoost)) Tj
+0 -14 Td
+(- Semantic resume-job matching, skill-gap detection, and automated career roadmap insights.) Tj
+0 -16 Td
+(2. Interactive Quiz Application (HTML, CSS, JavaScript)) Tj
+0 -14 Td
+(- Timed questions, instant scoring feedback, dynamic percentage evaluation, and responsive design.) Tj
+0 -24 Td
+/F1 13 Tf
+(ACHIEVEMENTS) Tj
+/F2 10 Tf
+0 -16 Td
+(- 300+ LeetCode Problems Solved) Tj
+0 -14 Td
+(- 1000+ CodeChef Rating) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000262 00000 n 
+0000000332 00000 n 
+0000000397 00000 n 
+trailer
+<<
+  /Size 7
+  /Root 1 0 R
+>>
+startxref
+1850
+%%EOF
