@@ -1,0 +1,351 @@
+.projects-section {
+  position: relative;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+}
+
+.projects-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* Editorial Project Block */
+.project-card-editorial {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+  align-items: start;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  position: relative;
+}
+
+.project-card-editorial:hover .project-title-editorial {
+  transform: translateX(8px);
+  color: var(--accent);
+}
+
+.project-card-editorial:hover .project-num-editorial {
+  color: var(--accent);
+}
+
+.project-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-num-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.project-num-editorial {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.project-category-editorial {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.project-title-editorial {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  transition: all var(--transition-smooth);
+}
+
+.project-subtitle-editorial {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.project-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.project-tech-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.28rem 0.65rem;
+  border-radius: var(--radius-sm);
+  background: rgba(10, 10, 10, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.project-view-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  margin-top: 0.5rem;
+}
+
+.project-view-cta svg {
+  transition: transform var(--transition-fast);
+}
+
+.project-card-editorial:hover .project-view-cta svg {
+  transform: translate(4px, -4px);
+  color: var(--accent);
+}
+
+/* Visual Presentation / Animated Flow Column */
+.project-visual-col {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.project-card-editorial:hover .project-visual-col {
+  background: #FFFFFF;
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(10, 10, 10, 0.06);
+}
+
+.project-visual-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.75rem;
+}
+
+/* Distinct visual treatments for the flows */
+.flow-diagram-nexthire {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  position: relative;
+}
+
+.flow-step-nexthire {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(10, 10, 10, 0.03);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  transition: all var(--transition-fast);
+}
+
+.flow-step-nexthire.flow-highlight,
+.project-card-editorial:hover .flow-step-nexthire:nth-child(even) {
+  border-color: var(--accent);
+  background: rgba(229, 57, 53, 0.04);
+}
+
+.flow-arrow-down {
+  display: flex;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Quiz Visual Flow Treatment */
+.flow-diagram-quiz {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.flow-quiz-card {
+  padding: 1.5rem 1rem;
+  background: rgba(10, 10, 10, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.flow-quiz-card:hover,
+.project-card-editorial:hover .flow-quiz-card.highlight {
+  border-color: var(--accent);
+  background: rgba(229, 57, 53, 0.05);
+}
+
+.flow-quiz-icon {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.flow-quiz-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Modal Drawer */
+.project-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.project-modal-drawer {
+  width: 100%;
+  max-width: 780px;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  overflow-y: auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  animation: slideDrawer 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-left: 1px solid var(--border-color);
+}
+
+@keyframes slideDrawer {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.modal-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.25rem;
+}
+
+.modal-close-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modal-section-title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.modal-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.modal-feature-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.modal-feature-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .project-card-editorial {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
