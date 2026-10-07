@@ -1,0 +1,112 @@
+.experience-section {
+  position: relative;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-item {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 0.7fr 1.6fr;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.exp-date-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.exp-year {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+}
+
+.exp-period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.exp-location {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.exp-details-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.exp-role-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.exp-company {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+
+.exp-responsibilities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.exp-resp-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.exp-resp-bullet {
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.exp-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 800px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
