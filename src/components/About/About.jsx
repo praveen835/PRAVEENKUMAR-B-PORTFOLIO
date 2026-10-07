@@ -82,9 +82,15 @@ export default function About() {
               <div className="about-portrait-frame">
                 <img
                   src={profileImg}
+                  onError={(e) => {
+                    if (!e.currentTarget.dataset.retried) {
+                      e.currentTarget.dataset.retried = 'true';
+                      e.currentTarget.src = `${import.meta.env.BASE_URL}images/praveenkumar-profile.png`;
+                    }
+                  }}
                   alt="Praveenkumar Balakrishnan - Python Developer & AI Engineer"
                   className="about-portrait-img"
-                  loading="lazy"
+                  loading="eager"
                 />
                 <div className="about-portrait-badge">
                   <span className="portrait-badge-dot" />
