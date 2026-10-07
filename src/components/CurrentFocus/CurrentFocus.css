@@ -1,0 +1,108 @@
+.current-focus-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  padding: clamp(3rem, 6vw, 4.5rem) 0;
+  overflow: hidden;
+}
+
+.focus-header-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.focus-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.focus-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+
+.focus-keywords-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.focus-keyword-item {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.03em;
+  transition: color var(--transition-fast);
+}
+
+.focus-keyword-item.accent-focus {
+  color: var(--accent);
+}
+
+.focus-keyword-sep {
+  color: var(--secondary-dark);
+  font-size: 1.2rem;
+}
+
+/* Infinite Kinetic Marquee Ticker */
+.focus-ticker-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+  padding: 1rem 0;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.focus-ticker-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: tickerScroll 24s linear infinite;
+}
+
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ticker-item {
+  font-family: var(--font-mono);
+  font-size: clamp(0.95rem, 1.4vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  white-space: nowrap;
+}
+
+.ticker-arrow {
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .focus-ticker-track {
+    animation: none;
+    flex-wrap: wrap;
+  }
+}
+
