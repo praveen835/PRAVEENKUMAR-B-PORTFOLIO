@@ -1,0 +1,6 @@
+/* App Specific Scoped Overrides */
+.main-content-flow {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
